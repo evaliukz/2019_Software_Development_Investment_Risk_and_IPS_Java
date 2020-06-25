@@ -1,0 +1,169 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1671\cocoasubrtf400
+{\fonttbl\f0\fnil\fcharset0 Georgia;}
+{\colortbl;\red255\green255\blue255;\red0\green0\blue0;\red255\green255\blue255;\red67\green67\blue67;
+\red0\green0\blue233;\red38\green38\blue38;\red0\green0\blue233;}
+{\*\expandedcolortbl;;\cssrgb\c0\c0\c0;\cssrgb\c100000\c100000\c100000;\cssrgb\c33333\c33333\c33333;
+\cssrgb\c0\c0\c93333;\cssrgb\c20000\c20000\c20000;\cssrgb\c0\c0\c93333;}
+\margl1440\margr1440\vieww18500\viewh12020\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\fs22 \cf2 MCIT 591 Investment Planning Statement (IPS) Planner\
+\
+\
+PART I PROGRAM DETAILS\
+Date  5/10/2019 \
+\
+Authors \
+\pard\pardeftab720\sl340\partightenfactor0
+\cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Mengxue (Kristy) Li       mengxli@seas.upenn.edu \
+Pradeep Ramachandran   pradeepr@seas.upenn.edu \
+\pard\pardeftab720\sl340\partightenfactor0
+\cf2 \outl0\strokewidth0 Yubei (Eva) Liu     \cf2 \cb3 yubeiliu@seas.upenn.edu\cf2 \cb1 \outl0\strokewidth0 \strokec2 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+\cf2 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 \
+\
+PART II USER INSTRUCTIONS (to users) \
+\
+MCIT 591 Investment Planning Statement (IPS) Planner ( \'93 the Program\'94 )  is \cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 to help the user understand the investment return and risk objectives, as well as providing recommended asset allocation and corresponding portfolio return and risks based on the user\'92s risk tolerance.\cf2 \kerning1\expnd0\expndtw0 \outl0\strokewidth0  During the use of the Program, the user is \
+\
+The users can click on the following buttons throughout the program. \
+\'93Start\'94 to go back to the first panel of the Program\
+\'93Next\'94 to go to the next panel \
+\'93Previous\'94 to go to the previous panel \
+\'93Exit\'94 to end the program during any step\
+\
+\
+Step 1: the users read and accept the terms and agreements in order to use the Program. \
+\
+Step 2: there users enter the personal investment information including the user name, user occupation, desired investment horizon, user annual income, user current asset, user annual income and expense, and the desired investment target amount at the end of the investment horizon. \
+\
+Step 3: the users answer six questions. These questions determine the users\'92 overall investment risk tolerance, the willingness and ability to tolerate investment risks. Where there are inconsistency between the willingness and ability, the Program will generate an alert. In reality, many investors do not have consistent , which will not stop the user\
+\
+Step 4: the Program displays a screen with the analysis of the user\'92s risk tolerance profile, including the overall risk score, willingness and ability to tolerate investment risks. \
+\
+Step 5: the Program displays a screen with the analysis of the user\'92s desired return objective. If the objective is challenging to achieve, the Programs will generate an alert. \
+\
+Step 6: the Program displays a screen with the recommended portfolio allocation to each class based on the user\'92s risk score. The Program also shows the portfolio return and standard deviation based on the user\'92s risk profile. Please note that the recommended portfolio return and standard deviation may be different from the user\'92s desired return and standard deviation. However, the recommended portfolio return is realistic. \
+\
+Step 7: the user can end the program by clicking on \'93Exit\'94 or \'93Next\'94 in the last panel. \
+\
+\
+PART III CLASSES (to code reviewers) \
+\
+1. Classes for User Interface Design: \
+\
+(1) IpsFrame\
+This class designs the panels structure and the buttons of the entire program. \
+\
+(2) WelcomePanel \
+This class is the 1st screen the user encounters. This page displays the terms and conditions as a disclaimer of the product function from a legal perspective. \
+\
+(3) FormPanel\
+This class sets the display of the 2nd screen the user encounters. This class focuses on the format and display of the text boxes. \
+\
+(4) PersonalInfoPenel (Error Check for User Input) \
+\pard\pardeftab720\partightenfactor0
+\cf2 This class incorporates the error check to validate the user's input format for "Personal Info" \
+\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+\cf2 (5) FormEvent\
+This class sets the events and collet the user\'92s input information needed for further analysis. \
+\
+(6) FormListener\
+This class sets interface for form event listener\
+\
+(7) RiskTolerancePanel \
+This class designs the first part (Question 1, 2, 3) of questionnaire that the user needs to answer for the risk assessment. \
+\
+(8) RiskTolerancePanel2 \
+This class designs the second part (Question 4, 5, 6) of questionnaire that the user needs to answer for the risk assessment. \
+\
+(9) RiskObjectivePanel \
+This class designs the display of the user\'92s risk tolerance analysis. \
+\
+\pard\pardeftab720\partightenfactor0
+\cf2 (10) ErrorControl (Error Check for User Input) \
+\pard\pardeftab720\partightenfactor0
+\cf2 This class incorporates the error check to validate the user's input format for \'93Risk Tolerance Multiple Choices\'93 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+\cf2 \
+(11) ReturnObjectivePanel\
+This class designs part of the display on the return objective panel. The algorithms below processed the user personal information input and generated return results. The results are passed to ReturnObjectivePanel and display for the user. \
+\
+(12) RiskObjectivePanel\
+This class designs part of the display on the risk objective panel.The algorithms below processed the user multiple choices restyles and generated risk score. The analysis are passed to RiskObjectivePanel and display for the user. \
+\
+(13) RecommendPortfolioPanel \
+This class designs the display the recommended allocation and the corresponding return and standard deviation. The algorithms below processed the user\'92s overall information and produce a more realistic recommended investment portfolio. Additionally, the algorithms below also calculates the expected return and standard deviation \
+\
+2. Classes for Finance Algorithms: \
+\
+(1) TimeValueOfMoney\
+This class contains the methods to generate the user\'92s return objective, which is the minimum return required to realize the user\'92s desired retirement goal, based on the information user entered related to the goals. \
+\
+Present Value = Current Asset Holding entered by the user; \
+Future Value = Desired Retirement Amount entered by the user; \
+Annuity = Annual Income - annual expense entered by the user; \
+Number of Years = Desired Retirement Age - User\'92s Current Age entered by the user;\
+Internal Rate of Return (IRR) = Minimum Portfolio Return can achieve the user\'92s desired retirement goals.\
+\
+Method \'93calculateIRR\'94 gives the final IRR output and Method \'93analyzeReturnObjective\'94 tests whether the user\'92s investment objective is realistic. \
+\
+(2) RiskScore\
+This class returns the user\'92s risk objective based on the survey taken by the user. \
+Question 1 to Question 4 returns the risk score for the user\'92s willingness to tolerate risks. Question 5 and Question 6, together with the user\'92s investment time horizon, which was denoted as Question 7, determine the user\'92s ability to tolerate investment risks. All seven questions as a whole determine the user\'92s overall risk tolerance. \
+\
+Method \'93analyzeRisk\'94 interprets the risk preference behind the user\'92s risk score. \
+\
+(3) SuggestedAllocation (Note 1 and Note 4) \
+This class returns the suggested asset allocation based on user\'92s risk objective. Please note that this allocation is not based on the user\'92s return objective. \
+\
+The algorithm is based on publications of several financial institutions, such as Charles Schwab and Wealthfront. \
+\
+(4) FinanceEquations  (Note 2, Note 3, and Note 4)\
+This class contains the algorithm to return the Portfolio Return and Risk with the suggested asset allocation from the class Suggested Allocation. The portfolio return is weighted average return of each individual asset in the portfolio. The portfolio risk is measure by the portfolio standard risk. \
+\
+Please note the suggested portfolio return and risk may not be consistent with the user\'92s desired return and risk. However, the suggested portfolio return and risk are more realistic based on the analysis from the financial institutions. \
+\
+(5) FutureValueCalc\
+This class contains the method to calculate the future portfolio value based on the current asset holding, annuity, investment horizon, etc. \
+\
+3. Classes for Integration between design and algorithm \
+\
+(1) DataManager \
+\
+This class collects value and passes value between user inputs and algorithms classes. It also contains a few validation test for some results generated by the algorithms. \
+\
+\
+\
+PART IV DATA SOURCES AND REFERENCES (to code reviewers) \
+\
+\pard\pardeftab720\sl260\sa240\partightenfactor0
+\cf2 \expnd0\expndtw0\kerning0
+Note 1: Schwab Center for Financial Research with data provided by Morningstar, Inc. \uc0\u8232 {\field{\*\fldinst{HYPERLINK "https://www.schwab.com/public/file/P-778947/InvestorProfileQuestionnaire.pdf"}}{\fldrslt \cf2 \ul \ulc5 https://www.schwab.com/public/file/P-778947/InvestorProfileQuestionnaire.pdf}}\cf2 \kerning1\expnd0\expndtw0 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \cb3 \expnd0\expndtw0\kerning0
+Note 2: Asset class correlations for time period 04/06/2009 - 05/07/2019 based on daily returns.\cb1 \kerning1\expnd0\expndtw0 \
+\pard\pardeftab720\sl280\partightenfactor0
+{\field{\*\fldinst{HYPERLINK "https://www.portfoliovisualizer.com/asset-class-correlations"}}{\fldrslt \cf2 \expnd0\expndtw0\kerning0
+\ul \ulc5 https://www.portfoliovisualizer.com/asset-class-correlations}}\expnd0\expndtw0\kerning0
+\ul \ulc5 \
+\pard\pardeftab720\sl280\partightenfactor0
+\cf2 \kerning1\expnd0\expndtw0 \ulnone \
+Note 3: Finance Algorithm demonstration example for the reviewer to understand \
+\pard\pardeftab720\sl280\partightenfactor0
+{\field{\*\fldinst{HYPERLINK "https://www.wallstreetmojo.com/portfolio-standard-deviation/"}}{\fldrslt \cf2 \expnd0\expndtw0\kerning0
+\ul https://www.wallstreetmojo.com/portfolio-standard-deviation/}}\
+\cf2 \expnd0\expndtw0\kerning0
+\
+\pard\pardeftab720\sl280\partightenfactor0
+\cf2 \kerning1\expnd0\expndtw0 Note 4: Wealthfron Investment Methodology White Paper \cf2 \expnd0\expndtw0\kerning0
+\
+\pard\pardeftab720\sl280\partightenfactor0
+{\field{\*\fldinst{HYPERLINK "https://research.wealthfront.com/whitepapers/investment-methodology/#2-finding_asset_classes"}}{\fldrslt \cf2 \ul \ulc2 \outl0\strokewidth0 \strokec7 https://research.wealthfront.com/whitepapers/investment-methodology/#2-finding_asset_classes}}\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+\cf2 \kerning1\expnd0\expndtw0 \
+\
+}
